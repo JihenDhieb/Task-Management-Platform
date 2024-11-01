@@ -1,0 +1,101 @@
+/* Container principal avec flexbox */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Section gauche */
+.left {
+    background-color: #ffffff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  
+    color: rgb(0, 0, 0);
+}
+
+/* Logo */
+.logo {
+    margin-top: 0;
+    margin-left: 50px;
+    width: 150px;
+    height: 150px;
+}
+
+/* Liens de navigation */
+.left ul a {
+    margin-bottom: 50px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: flex;
+}
+
+.left ul a i {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.left ul a:hover {
+    border-radius: 20px;
+    padding-block: 10px;
+    height: 30px;
+    width: 200px;
+    background-color: #d0baf4;
+    color: #6E39CB;
+    text-decoration: underline;
+}
+
+/* Section droite */
+.right {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 400px;
+    height: 250px;
+    display: flex; /* Utilisez flexbox pour disposer les éléments */
+    flex-direction: column; /* Colonne pour les informations sous l'image */
+    align-items: flex-start; /* Alignement à gauche */
+    background-color: #f9f9f9; /* Fond gris clair */
+    padding: 15px; /* Espacement interne */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0.1, 0.1); /* Ombre légère */
+}
+
+.profile-header {
+    display: flex; /* Disposition horizontale */
+    align-items: center; /* Alignement vertical centré */
+    width: 100%; /* Prend toute la largeur de la carte */
+}
+
+.profile-header img {
+    margin-left: 40%;
+    width: 80px; /* Largeur de l'image */
+    height: 80px; /* Hauteur de l'image */
+    border-radius: 50%; /* Arrondir l'image pour un effet de profil */
+}
+
+
+.info {
+    
+    padding: 15px;            /* Espacement interne */
+  margin-left: 15%;
+  margin-bottom: 10px;
+}
+
+.info h3 {
+    margin-bottom: 10px; /* Espacement en bas du titre */
+}
+
+.info ul {
+    list-style-type: none; /* Pas de puces */
+    padding: 0;           /* Suppression du remplissage par défaut */
+}
+
+.info li {
+    margin: 5px 0; /* Espacement vertical entre les éléments */
+}

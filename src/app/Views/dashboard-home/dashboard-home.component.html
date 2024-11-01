@@ -1,0 +1,106 @@
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="/assets/images/1.png" class="logo" >
+            <ul>
+                <a href="/dashboard"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-tasks"></i> Completed Tasks</a>
+               <a href="#"><i class="fas fa-bell"></i> Notifications</a>
+               <a href=""><i class="fas fa-calendar"></i>Calendar</a>
+            </ul>
+            <div class="Profile">
+                <img src="/assets/images/m.png"  class="avatar"> <!-- Ajoutez votre image ici -->
+                <h2>Jihen Dhieb</h2><br>
+               
+                <div class="menu">
+                    <i class="fas fa-ellipsis-v"></i> <!-- Icon for the vertical ellipsis -->
+                    <div class="dropdown-content">
+                        <a href="/login"><i class="fas fa-sign-out-alt"></i> Logout</a> <!-- Option 1 -->
+                        <a href="#"><i class="fas fa-cog"></i> Settings</a> <!-- Option 2 -->
+                        <a href="/profile"><i class="fas fa-user"></i> Profile</a> <!-- Option 3 -->
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        <div class="right">
+            <header>
+                <div class="header-content">
+                    <div class="search-bar">  
+                        <h1>Task List</h1>
+                        <div class="search-container">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search anything here......">
+                        </div>
+                    </div>
+                    <div class="addtask" (click)="toggleForm()">
+                        <i class="fas fa-add"></i>
+                    </div>
+                    
+                      <!-- Form to Add a Task -->
+                      <div id="task-form" style="display:none;">
+                        <form>
+                            <label for="task-title">Task Title:</label>
+                            <input type="text" id="task-title" name="task-title" required>
+                            <label for="task-date">Task Date Due:</label>
+                            <input type="date" id="task-date" name="task-date" required>
+                            
+                            <label for="task-status">Status:</label>
+                            <select id="task-status" name="task-status">
+                                <option value="in-progress">In Progress</option>
+                                <option value="completed">Completed</option>
+                                <option value="not-started">Not Started</option>
+                            </select>
+                            
+                            <button type="submit">Add Task</button>
+                            <button type="button" (click)="toggleForm()">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </header>    
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Calendrier</h3>
+                    <input type="date" placeholder="Sélectionnez une date">
+                </div>
+                <div class="card">
+                    <h3>Diagramme</h3>
+                    <p>Diagramme ici (par exemple, un graphique).</p>
+                </div>
+            </div>
+            <div class="ListTask">
+               
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let task of displayedTasks">
+                            <td>{{ task.name }}</td>
+                            <td>{{ task.status }}</td>
+                            <td>{{ task.dueDate }}</td>
+                            <td>
+                                <select [(ngModel)]="task.status">
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="On Hold">On Hold</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+                <a *ngIf="tasks.length > 5 && !allTasksShown" (click)="showAllTasks()" class="view-all-link">Voir tout</a>
+            </div>
+            
+        </div>       
+    </div>
+</body>

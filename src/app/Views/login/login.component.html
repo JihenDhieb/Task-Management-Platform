@@ -1,0 +1,38 @@
+
+<form (ngSubmit)="onLogin()">
+  <div class="login">
+    <h2 >Login</h2>
+    <p >How do i get started lorem ipsum dolor at?</p>
+    <label for="email">Email</label>
+  <input type="text" [(ngModel)]="email" name="email" placeholder="Enter your email" required>
+<label for="Password">Password</label>
+   <input type="password" [(ngModel)]="password" name="password" placeholder="*********" required>
+   <a href="/forget_password" class="password-sign-in-text-btn">
+    Forgot password
+  </a>
+  
+    <button type="submit" class="sign-in-btn">Sign In</button>
+    <div *ngIf="errorMessage" style="color:red;">{{ errorMessage }}</div>
+   <button type="button" class="google-sign-in-btn">
+      <img src="https://www.svgrepo.com/show/303108/google-icon-logo.svg"  style="width: 16px; height: 16px; margin-right: 10px;"> Sign in with Google
+      </button>
+      <button type="button" class="facebook-sign-in-btn">
+        <img src="https://e7.pngegg.com/pngimages/991/568/png-clipart-facebook-logo-computer-icons-facebook-logo-facebook-thumbnail.png"  style="width: 18px; height: 18px; margin-right: 10px;"> Sign in with Facebook
+        </button>
+
+</div> 
+<div class="Color">
+    <p id="parag2">
+        Very good works are<br>
+        waiting for you<br>
+        Sign up Now
+    </p>
+    <div class="image-container">
+     <div class="vertical-line"></div>  <img class="img" src="/assets/images/image 1.png" >
+      
+  </div>
+  <div class="horizontale-line"></div> 
+</div>
+
+</form>
+

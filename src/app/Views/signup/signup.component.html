@@ -1,0 +1,41 @@
+
+<form (ngSubmit)="onSignup()">
+  <div class="Color">
+    <p id="parag2">
+        Very good works are<br>
+        waiting for you<br>
+        Sign up Now
+    </p>
+    <div class="image-container">
+     <div class="vertical-line"></div>  <img class="img" src="/assets/images/image 2.png" >
+      
+  </div>
+  <div class="horizontale-line"></div> 
+</div>
+    <div class="signup">
+      <h2 >Signup</h2>
+      <p >Start your 30-day free trial.</p>
+      <label for="fullname">Fullname</label>
+      <input type="text" [(ngModel)]="fullname" name="fullname" placeholder="Full Name" required>
+      <label for="email">Email</label>
+    <input type="text" [(ngModel)]="email" name="email" placeholder="Enter your email" required>
+  <label for="Password">Password</label>
+     <input type="password" [(ngModel)]="password" name="password" placeholder="*********" required>
+     <p class="text">
+        You are agreeing to the <span class="terms">Terms of Services</span>
+        and Privacy Policy
+    </p>
+    
+      <button type="submit" class="sign-up-btn">Get started</button>
+     <p class="textbottom">Already a member?<a href="/login" class="sign-in-text-btn">Sign in</a>
+        
+    </p> 
+      <div *ngIf="errorMessage" style="color:red;">{{ errorMessage }}</div>
+    
+  
+  </div> 
+ 
+  
+  </form>
+  
+  

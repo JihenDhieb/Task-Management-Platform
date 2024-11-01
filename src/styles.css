@@ -1,0 +1,40 @@
+
+body {
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Ensure body takes full viewport height */
+    background-color: #F4F5F9; /* Light gray background */
+    font-family: Arial, sans-serif; /* Optional: set a default font */
+  }
+  
+  /* Optional: Style the login component */
+  app-login {
+    display: flex;
+    justify-content: center; /* Center the login form horizontally */
+    align-items: center; /* Center the login form vertically */
+    height: 100%; /* Ensure it takes full height */
+  }
+  app-signup {
+    display: flex;
+    justify-content: center; /* Center the login form horizontally */
+    align-items: center; /* Center the login form vertically */
+    height: 100%; /* Ensure it takes full height */
+  }
+  
+  app-forget-password{
+    display: flex;
+    justify-content: center; /* Center the login form horizontally */
+    align-items: center; /* Center the login form vertically */
+    height: 100%;
+  }
+  app-dashboard-home{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+  app-profile{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  
+  }
